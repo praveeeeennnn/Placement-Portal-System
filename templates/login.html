@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Login</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Circle Container */
+.circle-form {
+    width: 400px;
+    height: 400px;
+    background: white;
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    padding: 20px;
+}
+
+/* Heading */
+.circle-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Inputs */
+.circle-form input {
+    width: 70%;
+    padding: 10px;
+    margin: 8px 0;
+
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    font-size: 14px;
+}
+
+.circle-form input:focus {
+    border-color: #667eea;
+}
+
+/* Button */
+.circle-form button {
+    margin-top: 10px;
+    padding: 10px 25px;
+
+    border: none;
+    border-radius: 20px;
+
+    background: linear-gradient(135deg, #36dc76, #33c45a);
+    color: white;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+
+/* Register Link */
+.register-link {
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+.register-link a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<form method="POST" class="circle-form">
+
+<h2>Student Login</h2>
+
+<input type="email" name="email" placeholder="Email" required>
+<input type="password" name="password" placeholder="Password" required>
+
+<button type="submit">Login</button>
+
+<div class="register-link">
+New user? <a href="/register">Register here</a>
+</div>
+
+</form>
+
+</body>
+
+</html>

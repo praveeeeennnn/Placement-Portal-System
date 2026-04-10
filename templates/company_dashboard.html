@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Company Dashboard</title>
+</head>
+
+<body>
+
+<h1>Company Dashboard</h1>
+
+<a href="/create_drive">Create New Placement Drive</a>
+<br><br>
+
+<h2>Placement Drives</h2>
+
+<table border="1">
+
+<tr>
+<th>ID</th>
+<th>Job Title</th>
+<th>Company</th>
+<th>Status</th>
+<th>Applications</th>
+</tr>
+
+{% for drive in drives %}
+
+<tr>
+<td>{{ drive.id }}</td>
+<td>{{ drive.job_title }}</td>
+<td>{{ drive.company_name }}</td>
+<td>{{ drive.status }}</td>
+
+<td>
+<a href="/view_applications/{{ drive.id }}">View Applications</a>
+</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>

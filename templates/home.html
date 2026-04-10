@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Placement Portal</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
+}
+
+/* -------- Welcome Section -------- */
+
+.welcome{
+height:100vh;
+background:linear-gradient(135deg,#667eea,#764ba2);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:40px;
+}
+
+.welcome h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.welcome p{
+max-width:700px;
+font-size:20px;
+line-height:1.6;
+}
+
+.scroll-btn{
+margin-top:40px;
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:30px;
+background:white;
+color:#333;
+cursor:pointer;
+transition:0.3s;
+}
+
+
+
+/* -------- Portal Section -------- */
+
+.portal{
+height:100vh;
+background:linear-gradient(135deg,#579c67,#5bdaae);
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+color:white;
+}
+
+.circle-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+margin-top:40px;
+}
+
+/* Circle Design */
+
+.circle{
+width:180px;
+height:180px;
+border-radius:50%;
+background:linear-gradient(135deg,#66a1ea,#4b4fa2);
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+font-weight:bold;
+font-size:16px;
+box-shadow:0 8px 20px rgba(0,0,0,0.4);
+transition:0.3s;
+text-decoration:none;
+}
+
+
+
+/* Icon */
+
+.icon{
+font-size:40px;
+margin-bottom:10px;
+}
+
+/* Section Colors */
+
+.student{
+background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+
+.company{
+background:linear-gradient(135deg,#fc4a1a,#f7b733);
+}
+
+.register{
+background:linear-gradient(135deg,#667eea,#764ba2);
+}
+
+.admin{
+background:linear-gradient(135deg,#ee0979,#ff6a00);
+}
+
+.icon{
+font-size:60px;
+margin-bottom:15px;
+}
+
+a{
+text-decoration:none;
+color:white;
+width:100%;
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Welcome Section -->
+
+<section class="welcome">
+
+<h1>Placement Portal System</h1>
+
+<p>
+This Placement Portal Application helps institutes manage campus recruitment efficiently. 
+Students can register and apply for placement drives, companies can create job opportunities, 
+and the admin manages approvals and recruitment activities in one centralized system.
+</p>
+
+
+
+<a href="#portal">
+<button class="scroll-btn">Enter Portal</button>
+</a>
+
+</section>
+
+</div>
+
+</div>
+
+<!-- Portal Section -->
+
+<section id="portal" class="portal">
+
+<h2 style="text-align:center; width:100%; margin-top:30px;">Portal Access</h2>
+
+<div class="circle-container">
+
+    <a href="/login" class="circle">
+        <i class="fa-solid fa-user-graduate icon"></i>
+        <p>Student Login</p>
+    </a>
+
+    <a href="/register" class="circle">
+        <i class="fa-solid fa-user-plus icon"></i>
+        <p>Student Register</p>
+    </a>
+
+    <a href="/company_login" class="circle">
+        <i class="fa-solid fa-building icon"></i>
+        <p>Company Login</p>
+    </a>
+
+    <a href="/company_register" class="circle">
+        <i class="fa-solid fa-briefcase icon"></i>
+        <p>Company Register</p>
+    </a>
+
+    <a href="/admin_login" class="circle">
+        <i class="fa-solid fa-user-shield icon"></i>
+        <p>Admin Login</p>
+    </a>
+
+</div>
+
+</section>
+
+</body>
+</html>

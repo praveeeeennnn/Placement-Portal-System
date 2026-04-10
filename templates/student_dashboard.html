@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Student Dashboard</title>
+</head>
+
+<body>
+
+<h2>Student Dashboard</h2>
+
+<a href="/my_applications">View My Applications</a>
+
+<h3>Available Placement Drives</h3>
+
+<table border="1">
+
+<tr>
+<th>Job Title</th>
+<th>Company</th>
+<th>Eligibility</th>
+<th>Deadline</th>
+<th>Action</th>
+</tr>
+
+{% for drive in drives %}
+
+<tr>
+<td>{{ drive.job_title }}</td>
+<td>{{ drive.company_name }}</td>
+<td>{{ drive.eligibility }}</td>
+<td>{{ drive.deadline }}</td>
+
+<td>
+<a href="/apply/{{ drive.id }}">Apply</a>
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+
+</html>

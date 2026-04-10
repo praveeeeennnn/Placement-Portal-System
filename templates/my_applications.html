@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Applications</title>
+</head>
+
+<body>
+
+<h2>My Applications</h2>
+
+<table border="1">
+
+<tr>
+<th>Application ID</th>
+<th>Drive ID</th>
+<th>Status</th>
+</tr>
+
+{% for app in applications %}
+
+<tr>
+<td>{{ app.id }}</td>
+<td>{{ app.drive_id }}</td>
+<td>{{ app.status }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Company Registration</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Circle Container */
+.circle-form {
+    width: 440px;
+    height: 440px;
+    background: white;
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    padding: 20px;
+}
+
+/* Heading */
+.circle-form h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Inputs */
+.circle-form input {
+    width: 75%;
+    padding: 8px;
+    margin: 5px 0;
+
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    font-size: 14px;
+}
+
+.circle-form input:focus {
+    border-color: #667eea;
+}
+
+/* Button */
+.circle-form button {
+    margin-top: 10px;
+    padding: 10px 25px;
+
+    border: none;
+    border-radius: 20px;
+
+    background: linear-gradient(135deg, #28f78c, #2b691f);
+    color: white;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* Login Link */
+.login-link {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.login-link a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<form method="POST" class="circle-form">
+
+<h2>Company Register</h2>
+
+<input type="text" name="name" placeholder="Company Name" required>
+<input type="text" name="hr_contact" placeholder="HR Contact" required>
+<input type="email" name="email" placeholder="Email" required>
+<input type="text" name="website" placeholder="Website">
+<input type="password" name="password" placeholder="Password" required>
+
+<button type="submit">Register</button>
+
+<div class="login-link">
+Already registered? <a href="/company_login">Login here</a>
+</div>
+
+</form>
+
+</body>
+</html>

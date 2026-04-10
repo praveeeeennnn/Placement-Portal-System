@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Dashboard</title>
+</head>
+
+<body>
+
+<h1>Admin Dashboard</h1>
+
+<h3>Total Students: {{ students|length }}</h3>
+<h3>Total Companies: {{ companies|length }}</h3>
+<h3>Total Drives: {{ drives|length }}</h3>
+<h3>Total Applications: {{ applications|length }}</h3>
+
+<h2>Companies</h2>
+
+<table border="1">
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+
+{% for company in companies %}
+
+<tr>
+<td>{{ company.id }}</td>
+<td>{{ company.name }}</td>
+<td>{{ company.email }}</td>
+<td>{{ company.approval_status }}</td>
+
+<td>
+
+<a href="/approve_company/{{ company.id }}">Approve</a> 
+<a href="/reject_company/{{ company.id }}">Reject</a>
+
+</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+<h2>Placement Drives</h2>
+
+<table border="1">
+
+<tr>
+<th>ID</th>
+<th>Job Title</th>
+<th>Company</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+
+{% for drive in drives %}
+
+<tr>
+<td>{{ drive.id }}</td>
+<td>{{ drive.job_title }}</td>
+<td>{{ drive.company_name }}</td>
+<td>{{ drive.status }}</td>
+
+<td>
+<a href="/approve_drive/{{ drive.id }}">Approve</a> |
+<a href="/reject_drive/{{ drive.id }}">Reject</a>
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>
